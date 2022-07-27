@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--color-text-2);
+	font-variant-numeric: lining-nums;
+	font-feature-settings: 'lnum';
+   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+	line-height: normal;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: var(--color-text);
+}
+
+h1 {
+	font-size: 45px;
+	color: var(--color-text);
+}
+
+h2 {
+	font-size: 30px;
+}
+
+button {
+	cursor: pointer;
+	transition: all 0.5s;
+	position: relative;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 64px;
+	border: none;
+	background: var(--color-text-2);
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.button-icon,
+.button-icon__dis-hover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border: none;
+	height: 44px;
+	width: 44px;
+	border-radius: 100px;
+}
+/* 
+.button-icon:hover {
+	background-color: var(--color-button-lite);
+} */
+
+.btnLike.active {
+	background-color: var(--color-button-lite);
+}
+
+.btnLike.active svg {
+	color: green;
+}
+
+.button-lite {
+	background: var(--color-button-lite);
+}
+
+.button-line {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #c4c0b6;
+	padding: 0;
+	padding-bottom: 4px;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.button-line-mini {
+	background-color: transparent;
+	color: var(--color-text);
+	font-size: 16px;
+	letter-spacing: normal;
+	font-family: 'Playfair Display', serif;
+	position: relative;
+	/* width: 140px; */
+	height: 24px;
+	justify-content: start;
+	align-items: center;
+	padding-left: 44px;
+}
+
+.button-line-mini::after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 30px;
+	position: absolute;
+	top: 12px;
+	left: 0;
+	background-color: var(--color-text-brown-lite);
+	opacity: 0.8;
+}
+
+a {
+	color: var(--color-text-2);
+	text-decoration: none;
+}
+
+.price {
+	font-size: 16px;
+	font-weight: 500;
+	font-family: 'Playfair Display', serif;
+	display: inline-block;
+	color: var(--color-text-2);
+	position: relative;
+	margin-right: 18px;
+}
+
+.price::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: -15px;
+	background: url('../img/icons/ruble.svg');
+	height: 12px;
+	width: 12px;
+	transform: scale(1);
+}
+
+/* Components */
+
+/* logo */
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	font-family: 'Playfair Display', serif;
+	font-size: 12px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.logo_dark {
+	color: #ffffff;
+	font-weight: 600;
+}
+
+/* slider */
+.slider {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+}
+
+.slide {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.slider.active {
+	display: block;
+}
+
+.slider__nav {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 14px;
+}
+
+/* ICONS */
+.icon-menu {
+   height: 24px;
+   width: 24px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   justify-content: center;
+   align-items: center;
+}
+
+.icon-menu i {
+   content: '';
+   display: block;
+   height: 1.6px;
+   width: 20px;
+   background-color: #1B1A17;
+   top: 0;
+} 

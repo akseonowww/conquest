@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Conquest</title>
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/media.css" />
+	</head>
+	<body>
+		<header class="header">
+			<a href="./index.html">
+				<div class="logo">
+					<img src="./img/logo.svg" alt="Логотип" />
+					<span>CONQUEST</span>
+				</div>
+				<!-- /.logo -->
+			</a>
+			<nav class="nav">
+            <div class="nav__header">
+               <h2>Меню</h2>
+            </div>
+				<a href="#" class="nav__item">Каталог</a>
+				<a href="#" class="nav__item">Акции</a
+				><a href="#" class="nav__item">Доставка</a>
+				<a href="#" class="nav__item">Контакты</a>
+			</nav>
+			<!-- /.nav -->
+			<div class="options">
+				<button class="button-icon">
+					<img src="./img/icons/search.svg" alt="Поиск" />
+				</button>
+				<!-- /.button-icon -->
+				<button class="button-icon">
+					<img src="./img/icons/like.svg" alt="Избранное" />
+					<div class="count-likes">0</div>
+					<!-- /.count-likes -->
+				</button>
+				<!-- /.button-icon -->
+				<button class="button-icon">
+					<img src="./img/icons/basket.svg" alt="Корзина" />
+				</button>
+				<!-- /.button-icon -->
+				<button class="button-icon button-menu" onclick="openMenu(this)">
+					<i class="icon-menu"> <i></i><i></i><i></i> </i>
+					<!-- /.icon-menu -->
+				</button>
+				<!-- /.button-icon -->
+			</div>
+			<!-- /.options -->
+		</header>
+		<!-- /.header -->
+
+		<section class="main">
+			<div class="main__text">
+				<h1>Весна/Лето 2022</h1>
+				<h2>Коллекция</h2>
+				<p>
+					Швейцарские часы в наличии в Москве <br />
+					и с доставкой по всему миру
+				</p>
+				<button class="button">Смотреть каталог</button>
+			</div>
+			<!-- /.main__text -->
+			<div class="main__img">
+				<img class="clock" src="./img/watch_main.png" alt="Часы" />
+				<img class="ellipse" src="./img/Ellipse.svg" alt="Часы" />
+				<span class="img__info price"> 22 000 </span>
+				<!-- /.img__info -->
+				<span class="img__info info-size"> 28 мм диаметр </span>
+				<!-- /.img__info -->
+			</div>
+			<!-- /.main__img -->
+		</section>
+		<!-- /.main -->
+
+		<section class="top-models">
+			<h2>Популярные модели</h2>
+			<div class="descr">
+				<button class="button-line">Смотреть все</button>
+				<!-- /.button-line -->
+			</div>
+			<!-- /.descr -->
+
+			<div class="top-models__list">
+				<div class="models__item">
+					<button class="button-icon btnLike active" onclick="toLike(this)">
+						<img src="./img/icons/like.svg" alt="Избранное" />
+					</button>
+					<!-- /.button-icon -->
+					<div class="module__descr">
+						<strong class="module__title"> RADO </strong>
+						<!-- /.module__title -->
+						<span class="module__price price"> 65 300 </span>
+						<!-- /.module__price -->
+					</div>
+					<!-- /.module__descr -->
+					<div class="module__img">
+						<img src="./img/watch_1.png" alt="Часы" />
+					</div>
+					<!-- /.module__img -->
+					<div class="module__action">
+						<div class="button-line-mini">Подробнее</div>
+						<!-- /.button-line-mini -->
+					</div>
+					<!-- /.module_line-mini -->
+				</div>
+				<!-- /.models__item -->
+
+				<div class="models__item">
+					<button class="button-icon btnLike" onclick="toLike(this)">
+						<img src="./img/icons/like.svg" alt="Избранное" />
+					</button>
+					<!-- /.button-icon -->
+					<div class="module__descr">
+						<strong class="module__title"> RADO </strong>
+						<!-- /.module__title -->
+						<span class="module__price price"> 65 300 </span>
+						<!-- /.module__price -->
+					</div>
+					<!-- /.module__descr -->
+					<div class="module__img">
+						<img src="./img/watch_3.png" alt="Часы" />
+					</div>
+					<!-- /.module__img -->
+					<div class="module__action">
+						<div class="button-line-mini">Подробнее</div>
+						<!-- /.button-line-mini -->
+					</div>
+					<!-- /.module_line-mini -->
+				</div>
+				<!-- /.models__item -->
+
+				<div class="models__item">
+					<button class="button-icon btnLike" onclick="toLike(this)">
+						<img src="./img/icons/like.svg" alt="Избранное" />
+					</button>
+					<!-- /.button-icon -->
+					<div class="module__descr">
+						<strong class="module__title"> RADO </strong>
+						<!-- /.module__title -->
+						<span class="module__price price"> 65 300 </span>
+						<!-- /.module__price -->
+					</div>
+					<!-- /.module__descr -->
+					<div class="module__img">
+						<img src="./img/watch_4.png" alt="Часы" />
+					</div>
+					<!-- /.module__img -->
+					<div class="module__action">
+						<div class="button-line-mini">Подробнее</div>
+						<!-- /.button-line-mini -->
+					</div>
+					<!-- /.module_line-mini -->
+				</div>
+				<!-- /.models__item -->
+			</div>
+			<!-- /.top-models__list -->
+		</section>
+		<!-- /.top-models -->
+
+		<section class="features">
+			<div class="features__slider slider">
+				<div class="slide">
+					<div class="features__img">
+						<img src="./img/bg/photo_banner.jpg" alt="Фото циферблата" />
+					</div>
+					<!-- /.features__img -->
+					<div class="features__text">
+						<h2>Подлинное качество</h2>
+						<p>
+							Все часы производятся в Швейцарии и имеют <br />
+							сертификаты качества. Настоящие швейцарские <br />часы — это
+							предмет гордости и престижа.
+						</p>
+						<button class="button button-lite">СМОТРЕТЬ КАТАЛОГ</button>
+					</div>
+					<!-- /.features__text -->
+				</div>
+				<!-- /.slide -->
+				<div class="slide">
+					<div class="features__img">
+						<img
+							src="https://images.unsplash.com/photo-1526045431048-f857369baa09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+							alt="Фото циферблата"
+						/>
+					</div>
+					<!-- /.features__img -->
+					<div class="features__text">
+						<h2>Не отсаём от будущего</h2>
+						<p>
+							Мы расширили каталог новыми моделями. К ним относятся новые модели
+							от Швейцарских заводов со столетней историей.
+						</p>
+						<button class="button button-lite">СМОТРЕТЬ КАТАЛОГ</button>
+					</div>
+					<!-- /.features__text -->
+				</div>
+				<!-- /.slide -->
+				<div class="slide">
+					<div class="features__img">
+						<img
+							src="https://images.unsplash.com/photo-1546719900-f350ef5d469d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+							alt="Фото циферблата"
+						/>
+					</div>
+					<!-- /.features__img -->
+					<div class="features__text">
+						<h2>Обновлённая ностальгия</h2>
+						<p>
+							Мы приобрели модели 80-ых и 60-ых годов. Для искушённых
+							покупателей есть модели девятнадцотого века.
+						</p>
+						<button class="button button-lite">СМОТРЕТЬ КАТАЛОГ</button>
+					</div>
+					<!-- /.features__text -->
+				</div>
+				<!-- /.slide -->
+			</div>
+			<!-- /.features__slider.slider -->
+			<div class="features__nav slider__nav">
+				<button class="button-icon__dis-hover nav__prev" onclick="btnPrev()">
+					<img src="./img/icons/arrow_left.svg" alt="Предыдущий слайд" />
+				</button>
+				<!-- /.button-icon__dis-hover -->
+				<p class="nav__count">00</p>
+				<!-- /.nav__count -->
+				<button class="button-icon__dis-hover nav__next" onclick="btnNext()">
+					<img src="./img/icons/arrow_right.svg" alt="Следующий слайд" />
+				</button>
+				<!-- /.button-icon__dis-hover -->
+			</div>
+			<!-- /.features__nav slider__nav -->
+		</section>
+		<!-- /.features -->
+
+		<section class="social">
+			<div class="social__text">
+				<h2>Следите за нашими новостями</h2>
+				<p>
+					Подписывайтесь на <strong>@conquest_watch</strong> в соцсетях <br />
+					и узнавайте о новинках и акциях первыми.
+				</p>
+				<div class="social__list">
+					<a href="#"
+						><img src="./img/icons/instagram_icon.svg" alt="Instagram"
+					/></a>
+					<a href="#"
+						><img src="./img/icons/facebook_icon.svg" alt="Facebook"
+					/></a>
+					<a href="#"
+						><img src="./img/icons/twitter_icon.svg" alt="Twitter"
+					/></a>
+				</div>
+			</div>
+			<!-- /.social__text -->
+			<div class="social__images">
+				<img src="./img/bg/photo_1.jpg" alt="Фото часов" />
+				<img src="./img/bg/photo_2.jpg" alt="Фото часов" />
+				<img src="./img/bg/photo_3.jpg" alt="Фото часов" />
+			</div>
+			<!-- /.social__images -->
+		</section>
+		<!-- /.social -->
+
+		<footer class="footer">
+			<div class="footer__item">
+				<div class="footer__title">
+					<a href="./index.html" class="link-logo">
+						<div class="logo logo_dark">
+							<img src="./img/logo-dark.svg" alt="Логотип" />
+							<span>CONQUEST</span>
+						</div>
+						<!-- /.logo -->
+					</a>
+				</div>
+				<!-- /.footer__title -->
+				<a href="#" class="footer__link">8 (499) 450-47-97 </a>
+				<!-- /.footer__link -->
+				<a href="#" class="footer__link">info@conquest.watch.ru</a>
+				<!-- /.footer__link -->
+			</div>
+			<!-- /.footer__item -->
+
+			<div class="footer__item">
+				<div class="footer__title">о компании</div>
+				<!-- /.footer__title -->
+				<a href="#" class="footer__link">Наши магазины</a>
+				<!-- /.footer__link -->
+				<a href="#" class="footer__link">Вакансии</a>
+				<a href="#" class="footer__link">Сертификаты</a>
+				<a href="#" class="footer__link">Отзывы</a>
+				<!-- /.footer__link -->
+			</div>
+			<!-- /.footer__item -->
+
+			<div class="footer__item">
+				<div class="footer__title">покупателям</div>
+				<!-- /.footer__title -->
+				<a href="#" class="footer__link">Каталог товаров</a>
+				<!-- /.footer__link -->
+				<a href="#" class="footer__link">Как заказать?</a>
+				<a href="#" class="footer__link">FAQ</a>
+				<a href="#" class="footer__link">Корпоративным клиентам</a>
+				<!-- /.footer__link -->
+			</div>
+			<!-- /.footer__item -->
+
+			<div class="footer__item">
+				<div class="footer__title">оплата и доставка</div>
+				<!-- /.footer__title -->
+				<a href="#" class="footer__link">Способы оплаты</a>
+				<a href="#" class="footer__link">Время доставки</a>
+				<a href="#" class="footer__link">Гарантии и ремонт</a>
+				<a href="#" class="footer__link">Возврат и компенсация</a>
+				<!-- /.footer__link -->
+			</div>
+			<!-- /.footer__item -->
+		</footer>
+		<!-- /.footer -->
+
+		<script src="./main.js"></script>
+	</body>
+</html>
